@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="layout/base::layout(~{::body})">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="'Home Page'">Index Page</title>
+</head>
+
+<body>
+	<div>
+		<section class="pb-4 pt-3 bg-600">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h1 class="mb-6">Search College</h1>
+						<form class="row g-3">
+							<div class="col-sm-6 col-md-3">
+								<label class="form-label" for="inputCategories">Is NEET
+									Qualified?</label> <select class="form-select" id="inputCategories">
+									<option selected="selected">YES</option>
+									<option value="1">NO</option>
+								</select>
+							</div>
+							<div class="col-sm-6 col-md-3">
+								<label class="form-label" for="inputLevel">Country</label> <select
+									class="form-select" id="inputLevel">
+									<option value="">Select Country</option>
+									<option value="Kyrgyzstan">Kyrgyzstan</option>
+									<option value="Uzbekistan">Uzbekistan</option>
+									<option value="Russia">Russia</option>
+									<option value="China">China</option>
+									<option value="Armenia">Armenia</option>
+									<option value="Philippines">Philippines</option>
+								</select>
+							</div>
+							<div class="col-sm-6 col-md-3">
+								<label class="form-label" for="inputLanguage">College</label> <select
+									class="form-select" id="inputLanguage">
+									<option selected="selected">Select College</option>
+									<option>Jalalabad State University</option>
+									<option value="1">Smolensk State Medical University</option>
+									<option value="2">Tashkent medical academy</option>
+								</select>
+							</div>
+							<div class="col-sm-6 col-md-3">
+								<label class="form-label" for="inputInstructor">Course</label> <select
+									class="form-select" id="inputInstructor">
+									<option selected="selected">Select Courses</option>
+									<option>MBBS</option>
+									<option>MD</option>
+									<option>B.Sc Nursing</option>
+								</select>
+							</div>
+							<!-- <div class="col-auto z-index-2">
+								<button class="btn btn-primary" type="submit">Submit</button>
+							</div> -->
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
