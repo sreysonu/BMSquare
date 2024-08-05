@@ -10,7 +10,10 @@ public class AdminController {
 
 	@GetMapping("/dashboard")
 	public String dashboard() {
-		return "admin/layout/admin_base";
+		return "admin/dashboard";
 	}
-	
+	@GetMapping("/add-student")
+	public String addStudent() {
+		return "admin/add_student";
+	}
 }

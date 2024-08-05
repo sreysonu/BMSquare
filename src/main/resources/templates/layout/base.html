@@ -17,15 +17,8 @@
 <!-- ===============================================-->
 <!--    Favicons-->
 <!-- ===============================================-->
-<link rel="apple-touch-icon" sizes="180x180"
-	href="assets/img/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32"
-	href="assets/img/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16"
-	href="assets/img/favicons/favicon-16x16.png">
 <link rel="shortcut icon" type="image/x-icon"
-	href="assets/img/favicons/favicon.ico">
-<link rel="manifest" href="assets/img/favicons/manifest.json">
+	href="assets/img/favicons/faviconLogo.ico">
 <meta name="msapplication-TileImage"
 	content="assets/img/favicons/mstile-150x150.png">
 <meta name="theme-color" content="#ffffff">
@@ -35,21 +28,22 @@
 <!--    Stylesheets-->
 <!-- ===============================================-->
 <link href="assets/css/theme.css" rel="stylesheet" />
- <style>
-        .small-box {
-            max-width: 150px; /* Adjust this width as needed */
-        }
 
-        .large-box {
-            flex: 1;
-        }
+<script src="assets/js/jquery.min.js"></script>
+<style>
+.small-box {
+	max-width: 150px; /* Adjust this width as needed */
+}
 
-        .input-group {
-            width: 100%;
-        }
-    </style>
+.large-box {
+	flex: 1;
+}
+
+.input-group {
+	width: 100%;
+}
+</style>
 </head>
-
 
 <body>
 
@@ -90,7 +84,7 @@
 					<div class="col-auto">
 						<p class="my-2 fs--1">
 							<i class="fas fa-envelope me-3"></i><a class="text-900"
-								href="mailto:brightmedicom@gmail.com">brightmedicom@gmail.com</a>
+								href="mailto:info@brightmedicomaker.com">info@brightmedicomaker.com</a>
 						</p>
 					</div>
 				</div>
@@ -109,7 +103,7 @@
 				<a class="navbar-brand" th:href="index"> <span
 					style="color: blue; font-weight: bold;">Bright</span> <span
 					style="color: gray; font-weight: bold; font-family: 'Times New Roman', serif;">Medico
-						Maker</span>
+						Maker</span> <img src="assets/img/favlogo.png" width="100" alt="cta" />
 				</a>
 				<button class="navbar-toggler" type="button"
 					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -132,7 +126,7 @@
 
 					</ul>
 					<a class="btn btn-primary order-1 order-lg-0"
-						th:href="registration">Register Now</a>
+						th:href="enquire-form">Register Now</a>
 				</div>
 			</div>
 		</nav>
@@ -189,7 +183,7 @@
 						<a class="navbar-brand" href="index.html"> <span
 							style="color: #FDC800; font-weight: bold;">Bright</span> <span
 							style="color: white; font-weight: bold; font-family: 'Times New Roman', serif;">Medico
-								Maker</span>
+								Maker</span> <img src="assets/img/favlogo.png" width="100" alt="cta" />
 						</a>
 						<p class="text-light my-4">
 							<i class="fas fa-map-marker-alt me-3"></i><span
@@ -198,7 +192,7 @@
 						</p>
 						<p class="text-light">
 							<i class="fas fa-envelope me-3"> </i><a class="text-light"
-								href="mailto:brightmedicom@gmail.com">brightmedicom@gmail.com</a>
+								href="mailto:info@brightmedicomaker.com">info@brightmedicomaker.com</a>
 						</p>
 						<p class="text-light">
 							<i class="fas fa-phone-alt me-3"></i><a class="text-light"
@@ -231,10 +225,12 @@
 					<div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
 						<h5 class="lh-lg fw-bold text-light mb-4 font-sans-serif">More</h5>
 						<ul class="list-unstyled mb-md-4 mb-lg-0">
-							<li class="lh-lg"><a class="text-200" th:href="about-us">About us</a></li>
+							<li class="lh-lg"><a class="text-200" th:href="about-us">About
+									us</a></li>
 							<li class="lh-lg"><a class="text-200" th:href="admission">Blog</a></li>
 							<li class="lh-lg"><a class="text-200" href="#!">Careers</a></li>
-							<li class="lh-lg"><a class="text-200" th:href="registration">Enquire now</a></li>
+							<li class="lh-lg"><a class="text-200" th:href="enquire-form">Enquire
+									now</a></li>
 						</ul>
 					</div>
 
