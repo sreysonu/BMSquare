@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="layout/base::layout(~{::body})">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="'Home Page'">Index Page</title>
+</head>
+
+<body>
+	<div>
+		<section class="pb-2 pt-2 bg-600">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<h3 class="my-2 text-center">GET IN TOUCH</h3>
+						<!-- Display success message -->
+						<div th:if="${success}" class="alert alert-success"
+							th:text="${success}"></div>
+
+						<!-- Display error message -->
+						<div th:if="${error}" class="alert alert-danger"
+							th:text="${error}"></div>
+
+						<form th:action="@{/enquire_reg}" method="post" id="enqForm">
+							<div class="mb-2">
+								<label for="name" class="form-label">Name<span
+									style="color: red;">*</span></label> <input type="text"
+									class="form-control" id="name" name="name">
+									<span id="nameError" class="text-danger"> </span>
+							</div>
+							<div class="mb-2">
+								<label for="email" class="form-label">Email-ID<span
+									style="color: red;">*</span></label> <input type="email"
+									class="form-control" id="emailId" name="emailId">
+									<span id="emailError" class="text-danger"> </span>
+							</div>
+							<div class="mb-2">
+								<label for="contact" class="form-label">Contact Number<span
+									style="color: red;">*</span></label> <input type="number"
+									class="form-control" id="contact" name="contact">
+									<span id="contactError" class="text-danger"> </span>
+							</div>
+							<div class="mb-2">
+								<label for="state" class="form-label">State<span
+									style="color: red;">*</span></label> <input type="text"
+									class="form-control" id="state" name="state">
+									<span id="stateError" class="text-danger"> </span>
+							</div>
+							<div class="mb-2">
+								<label for="course" class="form-label">Course<span
+									style="color: red;">*</span></label> <select class="form-control"
+									id="course" name="course">
+																		<option value="">Select Course</option>
+									<option value="mbbs">MBBS</option>
+									<option value="nursing">B.Sc Nursing</option>
+									<option value="md">MD</option>
+								</select>
+								<span id="courseError" class="text-danger"> </span>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">Submit</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script> 
+	$(document).ready(function() {
+    $('#enqForm').submit(function(e) {
+        e.preventDefault();
+        var name = $('#name').val();
+        var emailId = $('#emailId').val();
+        var contact = $('#contact').val();
+        var state = $('#state').val();
+        var course = $('#course').val();
+        
+        let valid = true;
+        if (name === '') {
+            $('#nameError').text('Please enter your name.');
+            valid = false;
+        } else if (name.length > 50) {
+            $('#nameError').text('Name cannot be more than 50 characters.');
+            valid = false;
+        } else {
+            $('#nameError').text('');
+        }
+
+        if (emailId === '') {
+            $('#emailError').text('Please enter your email.');
+            valid = false;
+        } else if (emailId.length > 60) {
+            $('#emailError').text('Email cannot be more than 60 characters.');
+            valid = false;
+        } else {
+            $('#emailError').text('');
+        }
+
+        if (contact === '') {
+            $('#contactError').text('Please enter your contact number.');
+            valid = false;
+        } else if (contact.length > 20) {
+            $('#contactError').text('Contact number cannot be more than 20 characters.');
+            valid = false;
+        } else {
+            $('#contactError').text('');
+        }
+
+        if (state === '') {
+            $('#stateError').text('Please enter your state.');
+            valid = false;
+        } else if (state.length > 50) {
+            $('#stateError').text('State cannot be more than 50 characters.');
+            valid = false;
+        } else {
+            $('#stateError').text('');
+        }
+
+        if (course === '') {
+            $('#courseError').text('Please enter your course.');
+            valid = false;
+        }  else {
+            $('#courseError').text('');
+        }
+if(valid){
+
+    $('#enqForm')[0].submit();  
+}
+      
+    });
+});
+	</script>
+</body>
+</html>

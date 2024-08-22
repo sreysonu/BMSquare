@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+	th:replace="admin/layout/admin_base::layout(~{::body})">
+
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title th:text="'Home Page'">Index Page</title>
+</head>
+<body>
+	<div>
+		<main class="content">
+			<div class="container-fluid p-0">
+				<h1 class="h4 mb-1">
+					<strong>Analytics</strong> Dashboard
+				</h1>
+				<div class="row">
+					<div class="col-xl-6 col-xxl-5 d-flex">
+						<div class="w-100">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col mt-0">
+													<h5 class="card-title">Total Students</h5>
+												</div>
+
+												<div class="col-auto">
+													<div class="stat text-primary">
+														<i class="align-middle" data-feather="user"></i>
+													</div>
+												</div>
+											</div>
+											<h1 class="mt-1 mb-3">2.382</h1>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col mt-0">
+													<h5 class="card-title">Total Colleges</h5>
+												</div>
+												<div class="col-auto">
+													<div class="stat text-primary">
+														<i class="align-middle" data-feather="folder"></i>
+													</div>
+												</div>
+											</div>
+											<h1 class="mt-1 mb-3">14.212</h1>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col mt-0">
+													<h5 class="card-title">Total Courses</h5>
+												</div>
+
+												<div class="col-auto">
+													<div class="stat text-primary">
+														<i class="align-middle" data-feather="file-text"></i>
+													</div>
+												</div>
+											</div>
+											<h1 class="mt-1 mb-3">$21.300</h1>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<div class="row">
+												<div class="col mt-0">
+													<h5 class="card-title">Total Countries</h5>
+												</div>
+
+												<div class="col-auto">
+													<div class="stat text-primary">
+														<i class="align-middle" data-feather="book"></i>
+													</div>
+												</div>
+											</div>
+											<h1 class="mt-1 mb-3">64</h1>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6 col-xxl-9 d-flex">
+						<div class="card flex-fill">
+							<div class="card-header">
+
+								<h5 class="card-title mb-0">Latest Student</h5>
+							</div>
+							<table class="table table-hover my-0">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th class="d-none d-xl-table-cell">Country</th>
+										<th>Status</th>
+										<th class="d-none d-md-table-cell">Assignee</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sonu</td>
+										<td class="d-none d-xl-table-cell">Russia</td>
+										<td><span class="badge bg-success">Done</span></td>
+										<td class="d-none d-md-table-cell">Manav</td>
+									</tr>
+									<tr>
+										<td>Sunny</td>
+										<td class="d-none d-xl-table-cell">Uzbekistan</td>
+										<td><span class="badge bg-warning">Pending</span></td>
+										<td class="d-none d-md-table-cell">Amina</td>
+									</tr>
+									<tr>
+										<td>Raju Kumar</td>
+										<td class="d-none d-xl-table-cell">Kyrgyzstan</td>
+										<td><span class="badge bg-danger">In-Process</span></td>
+										<td class="d-none d-md-table-cell">Bhupendar</td>
+									</tr>
+									<tr>
+										<td>Sam</td>
+										<td class="d-none d-xl-table-cell">China</td>
+										<td><span class="badge bg-danger">In-Process</span></td>
+										<td class="d-none d-md-table-cell">Niketan</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
