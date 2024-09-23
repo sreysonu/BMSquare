@@ -25,4 +25,8 @@ public class HomeController {
 	public String colleges() {
 		return "colleges";
 	}
+	@GetMapping("/gallery")
+	public String gallery() {
+		return "gallery";
+	}
 }
